@@ -22,7 +22,7 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 from PIL import Image, ImageDraw
 
-class AudioSoundWavesEffect:
+class AudioSoundWavesEffectNode:
     """
     Node: AudioSoundWavesEffect
     Tạo hiệu ứng sound waves (cột/ sóng) đè lên video.
@@ -313,12 +313,11 @@ class AudioSoundWavesEffect:
         except:
             pass
         return (255, 0, 0, 255)  # default red if fail
-
-
+        
 NODE_CLASS_MAPPINGS = {
-    "AudioSoundWavesEffect": AudioSoundWavesEffect
+    "AudioSoundWavesEffectNode": AudioSoundWavesEffectNode
 }
 
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "AudioSoundWavesEffect": "Audio Sound Waves Effect"
+    "AudioSoundWavesEffectNode": AudioSoundWavesEffectNode
 }
